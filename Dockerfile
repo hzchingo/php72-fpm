@@ -7,6 +7,6 @@ RUN apk add libzip libbz2 libjpeg-turbo libpng libxslt freetype openldap-dev\
     && docker-php-ext-configure zip --with-libzip \
     && pecl install redis \
     && docker-php-ext-enable redis \
-    && docker-php-ext-install -j$(nproc) gd bcmath xsl zip bz2 ldap pdo-mysql
+    && docker-php-ext-install -j$(nproc) gd bcmath xsl zip bz2 ldap pdo_mysql
 
 RUN apk del .build-deps
